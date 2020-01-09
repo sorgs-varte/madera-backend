@@ -4,7 +4,7 @@ const jwt = require('jwt-simple');
 const config = require('../config');
 
 var userSchema = mongoose.Schema({
-    email: {
+    matricule: {
         type: String,
         lowercase: true,
         trim: true,
@@ -22,11 +22,14 @@ var userSchema = mongoose.Schema({
     prenom:{
         type: String,
         required: true
+    },
+    email : {
+        type : String
+    },
+    role : {
+        type : String
     }
 },{ timestamps: { createdAt: 'created_at' }});
-
-
-
 
 userSchema.methods = {
     authenticate: function (password) {

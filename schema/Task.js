@@ -2,20 +2,16 @@ const mongoose = require('mongoose');
 
 var taskSchema = mongoose.Schema({
     userId: {
-        type: String,
-        required : true
+        type: String
     },
-    begin: {
-        type: Date,
-        required: true
-    },
-    end:{
-        type: Date,
-        required: true
+    time: {
+        type: String
     },
     task:{
-        type: String,
-        required: true
+        type: String
+    },
+    date : {
+        type : Date
     }
 });
 
